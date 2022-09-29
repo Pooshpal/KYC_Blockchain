@@ -1,6 +1,9 @@
-## KYC_Blockchain
+# KYC_Blockchain
 Implementation of KYC using Blockchain Methodologies IPFS Database
 
+## WorkFLow:
+> IPFS
+> 
 # Reference : 
    - [Tutorial - Youtube](https://www.youtube.com/watch?v=coQ5dg8wM2o&t=2342s)
    - [To-Do List](https://github.com/dappuniversity/eth-todo-list) 
