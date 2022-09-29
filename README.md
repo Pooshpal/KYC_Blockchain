@@ -2,18 +2,18 @@
 Implementation of KYC using Blockchain Methodologies IPFS Database
 
 # Data Pipeline:
-New User 
+- New User 
 >  - Submits documents on Bank UI.
 >  - Data is stored to IPFS using OrbitDb Instance called from JS
 >  - OrbitDB returns a hash returned by IPFS after storing the documents.
 >  - This hash is now encrypted and the *private key* is handed over to The User.
 >  - The hash is now stored on Ethereum using ..........
-Existing User
+- Existing User
 >  - Bank fetches customer data by entering block hash value, retrives the encrypted hash.
 >  - USer Gives private key to allow bank to access their KYC details.
 >  - Bank asks for a verification to ensure entered details are valid.
 >  (subject to t&C of bank)
-Values Held By User:
+- Values Held By User:
 >  - *private key*
 >  - Block Hash value 
 
