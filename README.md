@@ -37,12 +37,21 @@ Implementation of KYC using Blockchain Methodologies IPFS Database
 >  - Connect truffle package to node to allow JS to communicate with the blockchain.
 >  - Use smart contracts in Truffle to allow custom objects to be created on the blockchain.
 >  - Code in solidity for making smart contracts for KYC
->  - - Smart Contract Structure : {home_bank_code : UE20CS201,encrypted_hash : #######}
+>    - Smart Contract Structure : {home_bank_code : UE20CS201,encrypted_hash : #######}
 
 ## Operations:
-  - Fetch Information :
->   skfijsdofns;dvnivb
- 
+1. Fetch Information :
+>  - User gives block hash value. 
+>  - Search for that block on Blockchain and return encrypted hash value.
+>  - User gives *private key*
+>  - KYC Documents are fetched from that hash on IPFS using OrbitDB
+
+
+2. Add Information :
+>  - User gives KYC Documents. 
+>  - Add documents to IPFS using OrbitDB and return hash.
+>  - Encrypt hash and give bank the encrypted hsh value to store on blockchain.
+>  - Return the decryption *private key* and the block hash on the blockchain where the hash is stored to the User.
 
 
 # Reference : 
