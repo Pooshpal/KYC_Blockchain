@@ -1,6 +1,6 @@
 # KYC_Blockchain
 Implementation of KYC using Blockchain Methodologies IPFS Database
-#  Installations and Dependencies : [View](Installation And Setup.md)
+#  Installations and Dependencies : ([Installation And Setup.md](https://github.com/Pooshpal/KYC_Blockchain/blob/main/Installation%20And%20Setup.md))
 ## Data Pipeline:
 - New User 
 >  - Submits documents on Bank UI.
