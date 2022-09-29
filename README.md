@@ -34,6 +34,7 @@ Implementation of KYC using Blockchain Methodologies IPFS Database
 >   - Connect IPFS to Node JS through OrbitDb and perform CRUD operations to data. [Reference](https://blog.logrocket.com/guide-to-orbitdb-node-js/)
 
 3. Using Ethereum 
+>  - Smart Contracts : Blockchain programs, Immutable , Written in SOlidity, like a Microservice.
 >  - Run Ganache as a local Blockchain Deployment.
 >  - Connect truffle package to node to allow JS to communicate with the blockchain.
 >  - Use smart contracts in Truffle to allow custom objects to be created on the blockchain.
