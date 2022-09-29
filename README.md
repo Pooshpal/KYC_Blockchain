@@ -16,7 +16,9 @@ Implementation of KYC using Blockchain Methodologies IPFS Database
 - Values Held By User:
 >  - *private key*
 >  - Block Hash value 
-
+- Background:
+>  - Ganache running in background to host the Blockchain Tech.
+>  - Custom made functions in Solidity to invoke ethureum functions. 
 
 
 ## WorkFLow:
