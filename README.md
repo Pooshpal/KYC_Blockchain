@@ -1,7 +1,7 @@
 # KYC_Blockchain
 Implementation of KYC using Blockchain Methodologies IPFS Database
 
-# Data Pipeline:
+## Data Pipeline:
 - New User 
 >  - Submits documents on Bank UI.
 >  - Data is stored to IPFS using OrbitDb Instance called from JS
@@ -23,14 +23,16 @@ Implementation of KYC using Blockchain Methodologies IPFS Database
 
 ## WorkFLow:
 1. Node JS and CSS to make Front End.
-> 
+> Input for New User: Collect Documents, return : *private key* , block hash value
+> Input for existing user: Verify Docs, return : new *private key* , new block hash value
 
 
 2. IPFS Using OrbitDB
 >   - OrbitDB : 
 >     - It is a serverless, distributed, P2P kind of database that relies on IPFS pub/sub for data storage and syncing amongst connected peers. This allows peers to either subscribe to new messages on a given topic or publish messages to a specific topic.
 >   - Connect IPFS to Node JS through OrbitDb and perform CRUD operations to data. [Reference](https://blog.logrocket.com/guide-to-orbitdb-node-js/)
-3. 
+
+3. Et 
  
 
 
