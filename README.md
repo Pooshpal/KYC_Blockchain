@@ -1,6 +1,7 @@
 # KYC_Blockchain
 Implementation of KYC using Blockchain Methodologies IPFS Database
-#  Installations and Dependencies : ([Installation And Setup.md](https://github.com/Pooshpal/KYC_Blockchain/blob/main/Installation%20And%20Setup.md))
+##  Installations and Dependencies : ([View](https://github.com/Pooshpal/KYC_Blockchain/blob/main/Installation%20And%20Setup.md))
+> For Ubuntu 22.04
 ## Data Pipeline:
 - New User 
 >  - Submits documents on Bank UI.
