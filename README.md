@@ -7,5 +7,6 @@ Implementation of KYC using Blockchain Methodologies IPFS Database
    - [App Tutorial](https://www.dappuniversity.com/articles/blockchain-app-tutorial)
    - [IEEE Paper](https://ieeexplore.ieee.org/document/9230987)
    - [ResearchGate Paper](https://www.researchgate.net/publication/340995551_Smart_KYC_Using_Blockchain_and_IPFS)
+   - [KYC - Using IPFC](https://github.com/XinFinOrg/KYC-on-IPFS)
 
     
