@@ -33,4 +33,11 @@
 
 ## Connect Ganache and Metamask
 > - Run Ganache, Connect to Local network and Log into an account . Follow (Link)[https://www.geeksforgeeks.org/how-to-set-up-ganche-with-metamask/]
-> -  
+
+
+## Steps to follow
+> - truffle innit
+> - npm install
+> - truffle migrate --reset
+> - truffle compile
+> - npm run dev 
