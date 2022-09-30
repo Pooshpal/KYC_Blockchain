@@ -12,6 +12,7 @@ App = {
   // https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8
   loadWeb3: async () => {
     if (typeof web3 !== 'undefined') {
+     // alert("hello")
       App.web3Provider = web3.currentProvider
       web3 = new Web3(web3.currentProvider)
     } else {
@@ -32,6 +33,7 @@ App = {
     // Legacy dapp browsers...
     else if (window.web3) {
       App.web3Provider = web3.currentProvider
+     
       window.web3 = new Web3(web3.currentProvider)
       // Acccounts always exposed
       web3.eth.sendTransaction({/* ... */})
@@ -44,6 +46,7 @@ App = {
 
   loadAccount: async () => {
     // Set the current blockchain account
+   
     App.account = web3.eth.accounts[0]
   },
 
@@ -95,7 +98,7 @@ App = {
       $newTaskTemplate.find('input')
                       .prop('name', taskId)
                       .prop('checked', taskCompleted)
-                      .on('click', App.toggleCompleted)
+                      // .on('click', App.toggleCompleted)
 
       // Put the task in the correct list
       if (taskCompleted) {
@@ -108,7 +111,6 @@ App = {
       $newTaskTemplate.show()
     }
   },
-
   createTask: async () => {
     App.setLoading(true)
     const content = $('#newTask').val()
