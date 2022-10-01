@@ -90,12 +90,23 @@ App = {
       const task = await App.todoList.tasks(i)
       const taskId = task[0].toNumber()
       const encryptedHash = task[1]
+      const homeBank = task[2]
       const profileName = task[3]
 
       // Create the html for the task
       const $newTaskTemplate = $taskTemplate.clone()
       $newTaskTemplate.find('.encryptedHash').html(encryptedHash)
       $newTaskTemplate.find('.profileName').html(profileName)
+      $newTaskTemplate.find('.homeBank').html(App.account)
+      $newTaskTemplate.find('.id').html(taskId)
+      // console.log(web3.eth.getTransaction('0x6c3a50003b3e96d2b98ed862510bd3f988f0830843368eb2c4bfc4f7f335ac4c'))
+      // var tx = web3.eth.getTransaction('0x6c3a50003b3e96d2b98ed862510bd3f988f0830843368eb2c4bfc4f7f335ac4c', function(err, transactionHash) {
+      //   if (!err)
+      //     console.log(transactionHash); 
+      // })
+      // console.log(tx)
+      // var accounts = web3.eth.getAccounts();
+      // console.log(accounts);
                       // .on('click', App.toggleCompleted)
 
       $('#taskList').append($newTaskTemplate)
@@ -108,8 +119,10 @@ App = {
     App.setLoading(true)
     const profileName = $('#profileName').val()
     const encryptedHash = $('#encryptedHash').val()
-    const homeBank = $('#account').val()
-    await App.todoList.createTask(encryptedHash, homeBank, profileName)
+    const homeBank = App.account
+    console.log(homeBank)
+    let result = await App.todoList.createTask(encryptedHash, homeBank, profileName)
+    // console.log(result)
     window.location.reload()
   },
 
