@@ -84,5 +84,4 @@ Implementation of storing data in IPFS
 We are using the ethereum blockchain to implement the blocks
 > Writing into the block, we don't store the entire data on the block because it will result in high gas value, so we are storing only  the encrypted hash value and returning the corresponding transaction id.
 > Giving pvtkey to the user, not only decreases the overhead of the block, but also ensures that any access to the personal data on ipfs can only be done by the consent of the individual.
->
-> 
+
