@@ -17,19 +17,13 @@
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "chai-bignumber": "^2.0.2",
-    "ipfs": "^0.55.2",
     "lite-server": "^2.3.0",
     "nodemon": "^1.17.3",
-    "orbit-db": "^0.26.1",
     "truffle": "5.0.2",
     "truffle-contract": "3.0.6"
   },
   "dependencies": {
-    "cryptojs": "^2.5.3",
     "express": "^4.18.1",
-    "fs": "^0.0.1-security",
-    "ipfs-core": "^0.16.1",
-    "multer": "^1.4.5-lts.1",
-    "requirejs": "^2.3.6"
+    "fs": "^0.0.1-security"
   }
 }

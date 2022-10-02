@@ -1,0 +1,12 @@
+{
+  
+  "dependencies": {
+  
+    
+  "crypto-js": "^4.1.1",
+  
+    
+  "ipfs-core": "^0.16.1"
+  
+  }
+}

@@ -91,7 +91,9 @@ App = {
     console.log(profileName,encryptedHash, homeBank)
     let result = await App.todoList.createTask(encryptedHash, homeBank, profileName)
     console.log(result)
-    document.getElementById('stat').innerHTML=result.logs[0].address
+    const taskCount = await App.todoList.taskCount()
+    var s = " Unique BLock ID : " + taskCount.toString()
+    document.getElementById('stat').innerHTML=s
     //window.location.reload()
   },
 
@@ -116,10 +118,10 @@ App = {
 
   
   cont:async ()=>{
-    const flag1 = $('#aadharFlag')
-    const flag2 = $('#panFlag')
-    const flag3 = $('#billFlag')
-    if (!(flag1 && flag2 && flag3)) {console.log(flag1,flag2,flag3)}
+    const flag1 = true
+    const flag2 = true
+    const flag3 = true
+    if (!(flag1 && flag2 && flag3)) {console.log(flag1,flag2,flag3);}
     else {
       // Add IPFS to "/home/pooshpal/Documents/KYC_Blockchain/KYC/uploads/" and get hash
       // encrypt hash and get encrypted hash and private key
@@ -133,12 +135,15 @@ App = {
   plsGet:async() => {
     var trans = $('#tx').val()
     console.log(trans)
-    let specificInstance = await App.contracts.TodoList.at(trans);
-    const task = await App.TodoList.tasks(0)
-
-    console.log(task[1])
+    const task = await App.todoList.tasks(parseInt(trans))
+    //console.log(task)
+    const taskContent = task[1]
+    document.getElementById('stt').innerHTML=taskContent
+      // Load the total task count from the blockchain
   }
 
 }
 
 App.load()
+
+
