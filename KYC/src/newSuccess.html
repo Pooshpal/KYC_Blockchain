@@ -1,6 +1,7 @@
 
-
 <!DOCTYPE html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,14 +26,6 @@
         margin-bottom: 10px;
       }
 
-      ul {
-        margin-bottom: 0px;
-      }
-
-      #completedTaskList .content {
-        color: grey;
-        text-decoration: line-through;
-      }
     </style>
   </head>
   <body>
@@ -47,25 +40,33 @@
     <div class="container-fluid">
       <div class="row">
         <main role="main" class="col-lg-12 d-flex justify-content-center">
-          <div id="loader" class="text-center">
-            <p class="text-center">Bank Server Connecting To BlockChain ...</p>
-          </div>
+          
           <div id="content">
-            <form onSubmit="App.createTask(); return false;">
-              <input id="profileName" type="text" class="form-control" placeholder="Add the profile Name" required>
-              <input id="encryptedHash" type="text" class="form-control" placeholder="Add the encrypted Hash" required>
-              <input type="submit">
-            </form>
-            <ul id="taskList" class="list-unstyled">
-              <div class="taskTemplate" style="display: none">
-                <label>
-                  <span class="id">Id goes here...</span>
-                  <span class="profileName">Profile Name goes here...</span>
-                  <span class="encryptedHash">Hash goes here...</span>
-                  <span class="homeBank">Home Bank goes here...</span>
-                </label>
-              </div>
-            </ul>
+            
+            <div class="card">
+                <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                  <i class="checkmark">✓</i>
+                </div>
+                  <h1>Success</h1> 
+                  <p>User successfully added<br/><br/>
+                      <div class="Hash"><div class="form-group">
+                        <label >Name</label>
+                        <input type="text" class="form-control" id="inputName"  placeholder="Enter Name">
+                      </div>
+                          <p><label>Directory : /home/pooshpal/Documents/KYC_Blockchain/KYC/uploads/</label><span></span><label id="addressFinal"></label></p>
+                          <br><br>
+                          <label>Enter The Encrypted Hash</label>
+                        </div>
+                        <div>
+                          <input type = "text" id="encryptedHash" placeholder="EncryptedHash"/>
+                          <center><button type="button" onclick="App.createTask();return false;">Upload</button></center>
+                        </div>
+                        <br>
+                        <div>
+                          <label id="stat">Status : Pending</label>
+                        </div>
+                </div>
+                
             </div>
         </main>
       </div>

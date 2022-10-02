@@ -1,3 +1,8 @@
+//import fs from 'fs'
+//import CryptoJS from 'crypto-js';
+//export default CryptoJS;
+//export {exec};
+
 App = {
   loading: false,
   contracts: {},
@@ -72,58 +77,22 @@ App = {
     // Render Account
     $('#account').html(App.account)
 
-    // Render Tasks
-    await App.renderTasks()
 
     // Update loading state
     App.setLoading(false)
   },
 
-  renderTasks: async () => {
-    // Load the total task count from the blockchain
-    const taskCount = await App.todoList.taskCount()
-    const $taskTemplate = $('.taskTemplate')
-
-    // Render out each task with a new task template
-    for (var i = 1; i <= taskCount; i++) {
-      // Fetch the task data from the blockchain
-      const task = await App.todoList.tasks(i)
-      const taskId = task[0].toNumber()
-      const encryptedHash = task[1]
-      const homeBank = task[2]
-      const profileName = task[3]
-
-      // Create the html for the task
-      const $newTaskTemplate = $taskTemplate.clone()
-      $newTaskTemplate.find('.encryptedHash').html(encryptedHash)
-      $newTaskTemplate.find('.profileName').html(profileName)
-      $newTaskTemplate.find('.homeBank').html(App.account)
-      $newTaskTemplate.find('.id').html(taskId)
-      // console.log(web3.eth.getTransaction('0x6c3a50003b3e96d2b98ed862510bd3f988f0830843368eb2c4bfc4f7f335ac4c'))
-      // var tx = web3.eth.getTransaction('0x6c3a50003b3e96d2b98ed862510bd3f988f0830843368eb2c4bfc4f7f335ac4c', function(err, transactionHash) {
-      //   if (!err)
-      //     console.log(transactionHash); 
-      // })
-      // console.log(tx)
-      // var accounts = web3.eth.getAccounts();
-      // console.log(accounts);
-                      // .on('click', App.toggleCompleted)
-
-      $('#taskList').append($newTaskTemplate)
-      
-      // Show the task
-      $newTaskTemplate.show()
-    }
-  },
+  
   createTask: async () => {
-    App.setLoading(true)
-    const profileName = $('#profileName').val()
+    const profileName = $('#inputName').val()
+    
     const encryptedHash = $('#encryptedHash').val()
     const homeBank = App.account
-    console.log(homeBank)
+    console.log(profileName,encryptedHash, homeBank)
     let result = await App.todoList.createTask(encryptedHash, homeBank, profileName)
-    // console.log(result)
-    window.location.reload()
+    console.log(result)
+    document.getElementById('stat').innerHTML=result.logs[0].address
+    //window.location.reload()
   },
 
   setLoading: (boolean) => {
@@ -137,11 +106,39 @@ App = {
       loader.hide()
       content.show()
     }
+  },
+  getVal:()=>{
+
+    const profileName = $('#inputName').val()
+    console.log(profileName)
+    App.profileName = profileName
+  },
+
+  
+  cont:async ()=>{
+    const flag1 = $('#aadharFlag')
+    const flag2 = $('#panFlag')
+    const flag3 = $('#billFlag')
+    if (!(flag1 && flag2 && flag3)) {console.log(flag1,flag2,flag3)}
+    else {
+      // Add IPFS to "/home/pooshpal/Documents/KYC_Blockchain/KYC/uploads/" and get hash
+      // encrypt hash and get encrypted hash and private key
+    App.getVal();
+      
+    window.location="./newSuccess.html";
+    //Document.getElementById('nameFinal').val=$('#inputName').val()}  
+    //document.getElementById('nameFinal').innerHTML=App.profileName}
+  }},
+
+  plsGet:async() => {
+    var trans = $('#tx').val()
+    console.log(trans)
+    let specificInstance = await App.contracts.TodoList.at(trans);
+    const task = await App.TodoList.tasks(0)
+
+    console.log(task[1])
   }
+
 }
 
-$(() => {
-  $(window).load(() => {
-    App.load()
-  })
-})
+App.load()

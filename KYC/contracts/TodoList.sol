@@ -8,6 +8,7 @@ contract TodoList {
     string encryptedHash;
     string homeBank;
     string profileName;
+  
   }
 
   mapping(uint => Task) public tasks;
@@ -17,6 +18,7 @@ contract TodoList {
     string encryptedHash,
     string homeBank,
     string profileName
+    
   );
 
   function createTask(string memory _encryptedHash, string memory _homeBank, string memory _profileName) public {

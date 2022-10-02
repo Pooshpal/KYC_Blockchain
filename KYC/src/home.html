@@ -17,24 +17,35 @@
         margin-top: 180px;
     }
     #button{
+        min-width: 60px;
         text-decoration: none;
         color:white;
     }
+    .alignImage{  
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
 </style>
-
+<style type="text/css">
+    .centerImage
+    {
+     text-align:center;
+     display:block;
+    }
+    </style>
 <link rel="shortcut icon" href="#">
 <body>
 
 
 <!-- Band Description -->
 <div class ="content">
-<section class="w3-container w3-center w3-content" style="max-width:600px">
-  <h2 class="w3-wide">KYC BLOCKCHAIN</h2>
-  <p class="w3-opacity"><i>Welcome</i></p>
-  <p class="w3-justify">Select from the following options</p>
+<section class="w3-container w3-center w3-content" >
+  <h2 class="w3-wide"><center>KYC</center></h2><br>
 </section>
-<button type="button" class="btn btn-primary btn-lg"><a href ="./newUser.html" id =
-    "button">New User</a></button>
+<p style="text-align:center;"><img src="https://forkast.news/wp-content/uploads/2021/08/KYC-768x432.jpg" class="centerImage" alt="KYC" style="width:500px"></p>
+<p class="w3-opacity"><i><center>Apply Here</center></i></p>
+<button type="button" class="btn btn-primary btn-lg" onclick="window.location='./newUser.html'">New User</button>
 
 <button type="button" class="btn btn-primary btn-lg">Existing User</button>
 </div>
