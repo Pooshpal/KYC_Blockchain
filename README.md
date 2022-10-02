@@ -66,4 +66,23 @@ Implementation of KYC using Blockchain Methodologies IPFS Database
    - [IPFS - Docs](https://docs.ipfs.tech/)
    - [OrbitDB](https://github.com/orbitdb/web3-workshop)
 
-    
+# During the hack 
+Implementation of storing data in IPFS
+## Attempt at connecting to IPFS through OrbitDB 
+>The running of OrbitDB and it's installation wasn't smooth. 
+>Most of the packages used are now depreciated. 
+>OrbitDB provided a clumsy and difficult interface to work with. Due to the extensive research needed into the documentation, and the very few rewards offered for using it, it was decided to abandon trying to use OrbitDB.
+
+## Using exec() in our javascript to interact with IPFS directly
+> To store data on the IPFS, we make use of nodejs. Node specifies the command line commands, that are executed after calling a child process. 
+> Operations achieved include: Uploading a directory stored locally on to IPFS, which generates a hash key 
+> Encrypting this hash key using crypto-js 
+> Passing the private key to the user, and passing the encrypted hash value to the blockchain component module for sotring in the block created. 
+> Given the transaction ID and the private key of the user, retrieving the data from IPFS and storing it in a local repository. 
+
+## Blockchain implementation 
+We are using the ethereum blockchain to implement the blocks
+> Writing into the block, we don't store the entire data on the block because it will result in high gas value, so we are storing only  the encrypted hash value and returning the corresponding transaction id.
+> Giving pvtkey to the user, not only decreases the overhead of the block, but also ensures that any access to the personal data on ipfs can only be done by the consent of the individual.
+>
+> 
