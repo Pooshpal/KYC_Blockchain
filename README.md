@@ -87,7 +87,7 @@ We are using the ethereum blockchain to implement the blocks
 
 
 ##Future Implementation 
--Versions in IPFS
+Versions in IPFS
 >Version Control Systems provide facilities to model files
 changing over time and distribute different versions efficiently.
 >New versions hash differently, and thus are new objects. Tracking versions is the job of additional versioning
