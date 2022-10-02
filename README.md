@@ -86,7 +86,7 @@ We are using the ethereum blockchain to implement the blocks
 > Giving pvtkey to the user, not only decreases the overhead of the block, but also ensures that any access to the personal data on ipfs can only be done by the consent of the individual.
 
 
-#Future Implementation 
+##Future Implementation 
 -Versions in IPFS
 >Version Control Systems provide facilities to model files
 changing over time and distribute different versions efficiently.
