@@ -85,3 +85,12 @@ We are using the ethereum blockchain to implement the blocks
 > Writing into the block, we don't store the entire data on the block because it will result in high gas value, so we are storing only  the encrypted hash value and returning the corresponding transaction id.
 > Giving pvtkey to the user, not only decreases the overhead of the block, but also ensures that any access to the personal data on ipfs can only be done by the consent of the individual.
 
+
+Future Implementation 
+-Versions in IPFS
+>Version Control Systems provide facilities to model files
+changing over time and distribute different versions efficiently.
+>New versions hash differently, and thus are new objects. Tracking versions is the job of additional versioning
+objects.
+>References:https://ipfs.io/ipfs/QmR7GSQM93Cx5eAg6a6yRzNde1FQv7uL6X1o4k7zrJa3LX/ipfs.draft3.pdf
+
